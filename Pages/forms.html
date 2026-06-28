@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Componentizing Forms — Saloni Dwivedi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Albert+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../CSS/shared.css" />
+<link rel="stylesheet" href="../CSS/case-study.css" />
+</head>
+<body data-page="work">
+
+<nav>
+  <a href="../index.html#home" data-nav-id="home">Home</a>
+  <a href="../index.html#work" data-nav-id="work">Work</a>
+  <a href="play.html" data-nav-id="play">Play</a>
+  <a href="about.html" data-nav-id="about">About</a>
+</nav>
+
+<div class="page-wrap">
+  <div class="cs-container">
+
+    <!-- HERO -->
+    <div class="cs-hero-wrap">
+      <!-- PLACEHOLDER: images/forms/hero.png -->
+      <img class="cs-hero-img" style="aspect-ratio:1015/475" src="../images/forms/hero.png" alt="Componentizing forms hero" loading="lazy" />
+
+      <div class="cs-meta">
+        <div class="cs-title-row">
+          <span class="mono-r">Fixing the product's backbone:</span>
+          <span class="mono-m" style="color:#8b6a44">Componentizing Forms</span>
+        </div>
+        <p class="cs-desc">Fixed the broken form creation and filling experience and scaled the form creation and ship time by 46% to achieve the goal to scaling to 3000 active services.</p>
+
+        <div class="cs-info-row">
+          <div class="cs-info-block">
+            <span class="cs-info-label">Team</span>
+            <span class="cs-info-value">Sam Suechting (Product Manager)<br>Me (Product designer)<br>Multiple engineers</span>
+          </div>
+          <div class="cs-info-block">
+            <span class="cs-info-label">Timeline</span>
+            <span class="cs-info-value">Aug 2025 - Jan 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider" style="max-width:709px"></div>
+
+    <div class="cs-body">
+
+      <!-- OVERVIEW -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#8b6a44">Overview</h2>
+
+        <div class="cs-block">
+          <h4>Context</h4>
+          <p>Forms are an integral part of the Commenda's product. All the services, filings and workflows need to collect information in various capacities from the user. Almost every flow has a form input in it.</p>
+          <p>Data collection being the backbone of the product, needs to be efficient, cohesive and delightful for the user.</p>
+        </div>
+
+        <div class="cs-block">
+          <h4>Target users for Agent App</h4>
+          <div class="chip-grid">
+            <div class="chip" style="color:#8b6a44">Buisness owners (CEOs, CTOs, CFOs)</div>
+            <div class="chip" style="color:#8b6a44">Analysts/finance teams</div>
+          </div>
+          <p>These people primarily use the Commenda's enterprise app to look at their ongoing services and provide data if needed for any service/filing/workflow.</p>
+          <p>They provide us information about their entities, which in most cases is quite a long massive multi-step form to complete.</p>
+        </div>
+      </div>
+
+      <!-- CONTRIBUTIONS -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#8b6a44">Contributions</h2>
+        <div class="contrib-list" style="width:100%">
+          <div class="contrib-card">
+            <h4>Led design from concept to ship</h4>
+            <p class="light">setting the direction, producing the work, and driving the team toward measurable outcomes.</p>
+          </div>
+          <div class="contrib-card">
+            <h4>Partnered cross-functionally</h4>
+            <p class="light">with UX research to assist in uncovering key user pain points.</p>
+          </div>
+          <div class="contrib-card">
+            <h4>Worked closely with stakeholders</h4>
+            <p class="light">to refine product strategy, balancing user needs with business goals.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROBLEM -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#8b6a44">Problem</h2>
+        <p>We identified that forms are a major point of friction for our users. Most forms in any filing/service is a multi-step form and it might take them days to submit it.</p>
+        <div class="chip-grid" style="width:100%">
+          <div class="card" style="flex:1">
+            <div class="stat-row"><span class="stat-num mono-m">35%</span><span style="color:#8b6a44">users drop-off in multi-step forms</span></div>
+          </div>
+          <div class="card" style="flex:1">
+            <div class="stat-row"><span class="stat-num mono-m">4 days</span><span style="color:#8b6a44">avg time-to-completion</span></div>
+          </div>
+        </div>
+        <p>These metrics showed us that users were quite uncertain and anxious while filling forms and this lead to them dropping off to confirm information.</p>
+        <div class="video-placeholder">[Video]</div>
+      </div>
+
+      <!-- HYPOTHESIS -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#8b6a44">Hypothesis and research</h2>
+        <p>I read and researched about how other products handle user-drop offs during data collection. And it turns out, most of it can be solved just by providing enough context and over-communicating with the user. This helps them skip the search and have everything they need to do the task.</p>
+
+        <div style="width:100%;display:flex;flex-direction:column;align-items:center;gap:16px">
+          <!-- PLACEHOLDER: images/forms/research-diagram.png -->
+          <img class="cs-img" style="max-width:476px;aspect-ratio:476/371" src="../images/forms/research-diagram.png" alt="Research diagram" loading="lazy" />
+          <p class="img-caption">Source: <a href="https://arc.net/l/quote/ehcjbupj" target="_blank">AI at Amazon by Bradley Ziffer</a></p>
+        </div>
+
+        <p>Most problems are search problems. If we make data ready-to-consume and easily digestible, the user experience automatically improves.</p>
+        <p>The other thing that I learned was data presentation. The way your product presents data says a lot about the product. We usually have a lot of data which can be useful to the user. We just need to be very prompt and keep an eye open for how can we make it accessible to the user in the right way so that the ser actually finds it useful.</p>
+      </div>
+
+      <!-- SOLUTION -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#8b6a44">Solution</h2>
+        <p>We introduced a modular form system built around reusable components. The core idea was to break forms into independent, composable modules that can be reused across workflows.</p>
+        <p>I will now briefly go over the architecture of the new system that we formulated approaching the problem from first principles.</p>
+        <div class="chip-grid">
+          <div class="chip" style="color:#8b6a44">SLA tracking</div>
+          <div class="chip" style="color:#8b6a44">Tasks, notifications and inbox</div>
+          <div class="chip" style="color:#8b6a44">Service delivery workflow</div>
+        </div>
+
+        <div class="cs-block">
+          <h4>1. Form modules (the base layer)</h4>
+          <p>The system I created for scalable form modules was simple: there will be a base form block component as the container. This container will have different variants for the form.</p>
+          <p>This will help us scaling the forms in future workflows and services.</p>
+          <div class="video-placeholder" style="align-items:center;padding-top:50px">[Video]</div>
+        </div>
+
+        <div class="cs-block">
+          <h4>2. Form composition layer</h4>
+          <p>Commenda has its own form builder to create and use forms. Even though it is quite scalable to create and ship forms without any engineering help, but creating forms from scratch every time is a tedious task for the ops team.</p>
+          <p>I identified common data patterns and converted them into reusable modules, for example:</p>
+          <ul>
+            <li>Company Information</li>
+            <li>Directors / Shareholders</li>
+            <li>Registered Address</li>
+            <li>Tax Identifiers</li>
+            <li>Financial Details etc.</li>
+          </ul>
+          <p>For data integration, Commenda has a data layer called CommendaOS. CommendaOS ensures that every user's data is stored centrally at one place so that finding relevant information is easy and users don't have to enter the same information again and again at different places.</p>
+          <p>Now these pre built modules were directly integrated with CommendaOS which made it easier to store data making these modules truly reusable.</p>
+          <div class="video-placeholder" style="align-items:center;padding-top:50px">[Video]</div>
+        </div>
+
+        <div class="cs-block">
+          <h4>And then, we hit a recursion problem</h4>
+          <p>Most of our forms had one thing in common: <strong>Nested Forms</strong>.</p>
+          <p>This meant that we needed similar kind of repeated information, for example, filling a spreadsheet with employee information; the type of information (columns) remain constant, you just keep adding more rows to it with different details about each employee.</p>
+          <p>This was a constant problem to us because in forms like incorporation, users needed to add director/shareholder information. There can be multiple directors and shareholders to an entity.</p>
+          <p>Then on top of that, there can be two different types of shareholders: individual &amp; corporate. In some cases, information about corporate shareholder of a corporate shareholder or individual shareholder of a corporate shareholder is also needed.</p>
+          <div class="video-placeholder" style="align-items:center;padding-top:50px">[Video]</div>
+          <p>We introduced bottom sheets instead of modals. Bottom sheets ensured that there is enough space to accommodate variable sizes of nested forms. The bottom sheet form will behave the same as the original full page form. It will replicate the same UI in case of steps.</p>
+        </div>
+
+        <div class="cs-block">
+          <h4>3. Experience layer (addressing the user pain points)</h4>
+          <p>After we had set up a strong and scalable foundation for creating and shipping forms, I started thinking about how to make the experience better for the users' pain points.</p>
+          <p>And i realized, a lot of it can just be solved through better copy, right content and guidance to the users at right places. So, I went ahead to talk to the ops team and CSMs to identify the major hotspots where users are usually stuck.</p>
+          <p>I also spent some time watching mixpanel sessions of users filling forms in various kinds of services/workflows.</p>
+          <p>This helped me gather some metrics like:</p>
+          <ul>
+            <li>Surface areas with high error rates</li>
+            <li>Step-wise drop-off rate</li>
+            <li>Save &amp; resume rate; % of users who leave and come back</li>
+          </ul>
+
+          <div class="chip-grid" style="width:100%">
+            <div class="card" style="flex:1">
+              <div class="stat-row"><span class="stat-num mono-m">68%</span><span style="color:#8b6a44">Save &amp; resume rate</span></div>
+            </div>
+            <div class="card" style="flex:1">
+              <div class="stat-row"><span class="stat-num mono-m">7</span><span style="color:#8b6a44">Surface areas with high error rate</span></div>
+            </div>
+          </div>
+          <p>These metrics were generally high for incorporation forms, sales tax onboarding steps and transfer pricing onboarding steps.</p>
+          <div class="video-placeholder" style="align-items:center;padding-top:50px">[Video]</div>
+
+          <p>I introduced the guidance badges to contain all the information about a certain input and why it is needed.</p>
+          <p>We first tried using info/help icons in place of the badges and after talking to a few users we realized, users usually skip those as they think it might not be helpful.</p>
+        </div>
+
+        <div class="cs-block">
+          <h4>Catering to the upsell opportunities</h4>
+          <p>There was a huge gap in the upsell space in our product. There were so many services that Commenda offered but the users weren't aware. They ended up buying those either outside the product or reaching out to the support separately to ask about this.</p>
+          <p>Due to this, we ended up losing a lot of opportunities to provide a product suite experience to our existing customers. I catered to this but thoughtfully placing upsell cards wherever required.</p>
+          <div class="video-placeholder" style="align-items:center;padding-top:50px">[Video]</div>
+        </div>
+
+        <div class="cs-block">
+          <h4>Making the users prepared</h4>
+          <p>For longer forms with multiple steps in it, usually users take time to fill it because they are not prepared. We decided to have a step 0 for the pre-requisites. This would inform the users about what type of information will be asked in this form and how they can be prepared beforehand with the information/documents.</p>
+        </div>
+      </div>
+
+      <!-- IMPACT -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#8b6a44">Impact</h2>
+        <div class="impact-grid" style="width:100%">
+          <div class="impact-card">
+            <div class="stat-row"><span class="stat-num">17%</span><span class="stat-label" style="color:#8b6a44">users drop-off in multi-step forms</span></div>
+            <p class="stat-desc">Reduction in missed deadlines due to better prioritization and visibility.</p>
+          </div>
+          <div class="impact-card">
+            <div class="stat-row"><span class="stat-num">2.5 days</span><span class="stat-label" style="color:#8b6a44">avg time-to-completion</span></div>
+            <p class="stat-desc">Faster task initiation using SLA dashboard + focused task views.</p>
+          </div>
+          <div class="impact-card">
+            <div class="stat-row"><span class="stat-num">21%</span><span class="stat-label" style="color:#8b6a44">Save &amp; resume rate</span></div>
+            <p class="stat-desc">Average workflow completion took ~14–16 days. Reduced to ~10–12 days</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEARNINGS -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#8b6a44">Learnings</h2>
+        <div class="learning-list" style="width:100%">
+          <div class="learning-card">
+            <h4>Designing for scalability</h4>
+            <p class="light">Working on the whole form filling experience and making a strong foundation for more scalability was a great learning curve for me. I got to know so many nuances and details about how scalable systems are created, deriving so many concepts from OOPS(Object Oriented Programming) to lay the foundation, understanding user's behavior and their thought process.</p>
+          </div>
+          <div class="learning-card">
+            <h4>Standardization needs flexibility</h4>
+            <p class="light">A fully standardized form system would have limited product growth. The real challenge was creating reusable modules that could still adapt to different jurisdictions, services, and business requirements through configuration rather than custom builds.</p>
+          </div>
+          <div class="learning-card">
+            <h4>Data is a shared product asset</h4>
+            <p class="light">The same information was being collected across multiple workflows in different ways. Treating data collection as a shared product capability improved consistency, reduced duplication, and enabled a more cohesive user experience across Commenda.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE NAV -->
+      <div class="page-nav" style="width:100%">
+        <a href="../index.html" class="btn-back">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Home
+        </a>
+        <a href="service-delivery.html" class="btn-next">
+          View previous case study
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">© 2026. Crafted by <a href="#">@salonidwivedi</a></div>
+
+<script src="../JS/nav.js"></script>
+</body>
+</html>

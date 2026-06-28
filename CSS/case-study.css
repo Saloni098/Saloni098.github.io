@@ -1,0 +1,109 @@
+/* ============================================================
+   case-study.css  —  load on case study pages only
+   (service-delivery.html, forms.html, design-system.html)
+   ============================================================ */
+
+   .cs-container { display: flex; flex-direction: column; align-items: center; gap: 44px; }
+
+   /* hero block */
+   .cs-hero-wrap { display: flex; flex-direction: column; align-items: center; gap: 32px; width: 100%; }
+   .cs-hero-img {
+     width: 100%;
+     aspect-ratio: 3045 / 1425;
+     height: auto;
+     object-fit: contain;
+     border-radius: 8px;
+     background: #eaeaea; /* placeholder fill */
+     display: block;
+   }
+   
+   .cs-meta { display: flex; flex-direction: column; gap: 32px; width: 100%; max-width: 709px; }
+   .cs-title-row {
+     display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+     font-size: 20px; letter-spacing: -0.4px;
+   }
+   .cs-desc { font-size: 16px; font-weight: 300; }
+   
+   .cs-info-row { display: flex; align-items: flex-start; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+   .cs-info-block { display: flex; flex-direction: column; gap: 12px; }
+   .cs-info-label { font-weight: 300; font-style: italic; font-size: 16px; }
+   .cs-info-value { font-size: 16px; }
+   
+   /* body content column */
+   .cs-body { display: flex; flex-direction: column; gap: var(--section-gap); align-items: center; width: 100%; max-width: 709px; min-width: 0; }
+   .cs-section { display: flex; flex-direction: column; gap: 32px; align-items: flex-start; width: 100%; min-width: 0; }
+   .cs-section p { font-size: 16px; }
+   .cs-section ul, .cs-section ol { padding-left: 24px; display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
+   .cs-section h4 { font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 18px; letter-spacing: -0.36px; }
+   
+   .cs-block { display: flex; flex-direction: column; gap: 16px; width: 100%; }
+   
+   /* designs / full-bleed images for case studies (wider than text column) */
+   .cs-wide { max-width: 1015px; width: 100%; }
+   .cs-img {
+     width: 100%;
+     border-radius: 8px;
+     height: auto;
+     object-fit: contain;
+     background: #eaeaea;
+     display: block;
+   }
+   .cs-img-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; width: 100%; }
+   .cs-img-tall { aspect-ratio: 1499/1563; }
+
+   .image-slider {
+     width: 100%;
+     max-width: 100%;
+     min-width: 0;
+     align-self: center;
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+   }
+
+   .image-slider-frame {
+     width: 100%;
+     min-width: 0;
+     aspect-ratio: 753 / 374;
+     border-radius: 8px;
+     background: #eaeaea;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     overflow: hidden;
+   }
+
+   .image-slider-frame img {
+     width: 100%;
+     height: 100%;
+     object-fit: contain;
+     display: block;
+   }
+
+   .image-slider .page-nav { width: 100%; margin-top: 0; }
+
+   .image-slider .btn-back,
+   .image-slider .btn-next {
+     font-size: 14px;
+     padding: 6px 12px;
+   }
+
+   .slide-count {
+     font-family: 'IBM Plex Mono', monospace;
+     font-size: 14px;
+     color: var(--gray-text);
+     white-space: nowrap;
+   }
+   
+   /* image caption with source link */
+   .img-caption {
+     font-size: 14px; font-weight: 300; font-style: italic;
+     text-align: center; width: 100%;
+   }
+   .img-caption a { color: #187bdb; text-decoration: underline; }
+   
+   @media (max-width: 768px) {
+     .cs-img-grid-2 { grid-template-columns: 1fr; }
+     .cs-title-row { font-size: 17px; }
+     .cs-info-row { flex-direction: column; gap: 16px; }
+   }

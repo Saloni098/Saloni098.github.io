@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pathfinder Design System — Saloni Dwivedi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Albert+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../CSS/shared.css" />
+<link rel="stylesheet" href="../CSS/case-study.css" />
+</head>
+<body data-page="work">
+
+<nav>
+  <a href="../index.html#home" data-nav-id="home">Home</a>
+  <a href="../index.html#work" data-nav-id="work">Work</a>
+  <a href="play.html" data-nav-id="play">Play</a>
+  <a href="about.html" data-nav-id="about">About</a>
+</nav>
+
+<div class="page-wrap">
+  <div class="cs-container">
+
+    <!-- HERO -->
+    <div class="cs-hero-wrap">
+      <!-- PLACEHOLDER: images/design-system/hero.png -->
+      <img class="cs-hero-img" src="../images/design-system/hero.png" alt="Design system hero" loading="lazy" />
+
+      <div class="cs-meta">
+        <div class="cs-title-row">
+          <span class="mono-r">Pathfinder:</span>
+          <span class="mono-m" style="color:#007ea3">Making the Design System LLM ready</span>
+        </div>
+        <p class="cs-desc">Feeding our design system to Claude code and making our it accessible for everyone to build!</p>
+
+        <div class="cs-info-row">
+          <div class="cs-info-block">
+            <span class="cs-info-label">Team</span>
+            <span class="cs-info-value">Sam Suechting (Product Manager)<br>Me (Product designer)<br>Multiple engineers</span>
+          </div>
+          <div class="cs-info-block">
+            <span class="cs-info-label">Timeline</span>
+            <span class="cs-info-value">Aug 2025 - Jan 2026</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider" style="max-width:709px"></div>
+
+    <div class="cs-body">
+
+      <!-- OVERVIEW -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#007ea3">Overview</h2>
+
+        <div class="cs-block">
+          <h4>Context</h4>
+          <p>By the end of January 2026, AI tools like Claude code, cursor and other AI agents became an integral part of Commenda. Everyone was trying their hands on ideating, prototyping, testing and then finally trying to ship things out on their own.</p>
+        </div>
+
+        <div class="cs-block">
+          <h4>Target users for Agent App</h4>
+          <div class="chip-grid">
+            <div class="chip" style="color:#007ea3">Designers</div>
+            <div class="chip" style="color:#007ea3">Non-designers (Engineers + Product team)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROBLEM -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#007ea3">Problem</h2>
+        <p>Now that building has become accessible to all, design was becoming a blocker here. While prototyping, people were not able to use our design system components. Also, even if you give a handoff ready figma design to an LLM, it still hallucinates a lot.</p>
+        <p>You describe a component, the AI builds it, it looks good. You describe another one, that looks good too. By the end of the session, you've got 15 components and a layout that feels professional. But what actually happened under the surface is that the AI made somewhere between 200 and 300 visual micro-decisions during that session.</p>
+        <p>It also does not keep record of the past micro-decisions that it made to set the padding, spacing, typography etc. Eventually things start feeling off. And it becomes really a headache to fix it because on the surface level it kinda looks okayish but only a designer will tell you what's exactly off.</p>
+        <p>So I took upon this project to make our design system scalable across AI agents, code and prototype. So that anyone can just pick up atoms, modules and all the pre-defined tokens and variables from the system directly and ship the feature.</p>
+        <p>I took inspiration from <span style="color:#187bdb">Hardik Pandya</span>, and Intercom's design team</p>
+      </div>
+
+      <!-- EXISTING SYSTEM -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#007ea3">The existing system</h2>
+        <div
+          class="image-slider"
+          data-slider
+          data-slides="../images/design system/des-sys1.png|../images/design system/des-sys2.png|../images/design system/des-sys3.png|../images/design system/des-sys4.png|../images/design system/des-sys5.png"
+          data-alts="Design system overview|Design system detail 1|Design system detail 2|Design system detail 3|Design system detail 4"
+        >
+          <div class="image-slider-frame">
+            <img src="../images/design system/des-sys1.png" alt="Design system overview" loading="lazy" data-slider-image />
+          </div>
+          <div class="page-nav">
+            <button class="btn-back" type="button" data-slider-prev>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Back
+            </button>
+            <span class="slide-count" data-slider-count>1 / 5</span>
+            <button class="btn-next" type="button" data-slider-next>
+              Next
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#007ea3">1. Preparing the Design System</h2>
+        <div class="contrib-list" style="width:100%">
+          <div class="contrib-card"><h4 style="margin-bottom:0">Reduced redundancy (merged similar components)</h4></div>
+          <div class="contrib-card"><h4 style="margin-bottom:0">Standardized naming (strict, predictable patterns)</h4></div>
+          <div class="contrib-card"><h4 style="margin-bottom:0">Flattened structure (removed unnecessary nesting)</h4></div>
+          <div class="contrib-card"><h4 style="margin-bottom:0">Removed unused/dead components</h4></div>
+        </div>
+
+        <!-- PLACEHOLDER: images/design-system/component-audit.png -->
+        <img class="cs-img" style="aspect-ratio:711/331" src="../images/design-system/component-audit.png" alt="Component audit diagram" loading="lazy" />
+
+        <div class="cs-block">
+          <p>Earlier we had so many unnecessary states and variants for components like input fields, buttons, dropdowns etc. I sat down and brainstormed on how to optimize the variants to have the minimum amount of variants for each component.</p>
+
+          <p style="margin-top:8px">Before:</p>
+          <div class="code-block code-red">{
+  "input_default": {},
+  "input_destructive": {},
+  "input_disabled": {}
+}</div>
+
+          <p style="margin-top:8px">After:</p>
+          <div class="code-block code-purple">{
+  "input": {
+    "type": ["active", "destructive", "disabled"],
+    "variant": ["filled", "placeholder"],
+    "state": ["default", "hover", "focused"]
+  }
+}</div>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#007ea3">2. Syncing with Code Library</h2>
+        <p>I sat with our design engineer to audit and align Figma and code. The goals here were:</p>
+        <div class="contrib-list" style="width:100%">
+          <div class="contrib-card"><h4 style="margin-bottom:0">1:1 parity between design and code</h4></div>
+          <div class="contrib-card"><h4 style="margin-bottom:0">No "design-only" or "code-only" components</h4></div>
+        </div>
+        <p>We removed mismatched components, updated props to reflect actual usage, and ensured all tokens mapped correctly.</p>
+
+        <div class="code-block code-purple">&lt;Button variant="primary" size="md"&gt;
+  Continue
+&lt;/Button&gt;</div>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span>Matched exactly with Figma:</span>
+          <span style="background:#f6f6f6;padding:4px 8px;border-radius:8px">button / primary / md</span>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#007ea3">3. Feeding Tokens to Claude Code</h2>
+        <p>We exposed tokens and components to Claude Code via:</p>
+        <div class="contrib-list" style="width:100%">
+          <div class="contrib-card"><h4 style="margin-bottom:0">Figma MCP</h4></div>
+          <div class="contrib-card"><h4 style="margin-bottom:0">Codebase (cursor access)</h4></div>
+        </div>
+
+        <p>Now, Claude could understand available components, compose UI using valid props, and avoid hallucinating styles.</p>
+
+        <p style="margin-top:8px">Token structure:</p>
+        <div class="code-block code-purple">{
+  "color.primary": "#4F46E5",
+  "spacing.md": "16px",
+  "radius.sm": "6px"
+}</div>
+
+        <p style="margin-top:8px">Component definition (LLM-readable):</p>
+        <div class="code-block code-purple">{
+  "component": "button",
+  "props": {
+    "variant": ["primary", "secondary"],
+    "size": ["sm", "md", "lg"]
+  },
+  "tokens": ["color", "spacing", "radius"]
+}</div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#007ea3">4. Auditing Components + Tokens</h2>
+        <p>We tested with non-designers across teams, the product team, the the ops team, the customer success team.</p>
+        <!-- PLACEHOLDER: images/design-system/testing-session.png -->
+        <img class="cs-img" style="aspect-ratio:727/190" src="../images/design-system/testing-session.png" alt="Testing session screenshot" loading="lazy" />
+
+        <p>Now, Claude could understand available components, compose UI using valid props, and avoid hallucinating styles.</p>
+        <p style="margin-top:8px">Example output:</p>
+        <div class="code-block code-purple">&lt;Card&gt;
+  &lt;CardHeader title="Sales Tax Overview" /&gt;
+  &lt;CardContent&gt;
+    &lt;Button variant="primary"&gt;File Now&lt;/Button&gt;
+  &lt;/CardContent&gt;
+&lt;/Card&gt;</div>
+      </div>
+
+      <!-- IMPACT -->
+      <div class="cs-section">
+        <h2 class="section-heading" style="color:#007ea3">Impact</h2>
+        <div class="impact-grid" style="width:100%">
+          <div class="impact-card">
+            <div class="stat-row"><span class="stat-num">30-60 mins</span></div>
+            <p class="stat-desc">Saved per session</p>
+          </div>
+          <div class="impact-card">
+            <div class="stat-row"><span class="stat-num">0 dependency</span></div>
+            <p class="stat-desc">on design for early prototypes</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- PAGE NAV -->
+      <div class="page-nav" style="width:100%">
+        <a href="../index.html" class="btn-back">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Home
+        </a>
+        <a href="../index.html#work" class="btn-next">
+          View next case study
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="footer">© 2026. Crafted by <a href="#">@salonidwivedi</a></div>
+
+<script src="../JS/nav.js"></script>
+<script src="../JS/slider.js"></script>
+</body>
+</html>
