@@ -13,8 +13,7 @@
 <body data-page="work">
 
 <nav>
-  <a href="../index.html#home" data-nav-id="home">Home</a>
-  <a href="../index.html#work" data-nav-id="work">Work</a>
+  <a href="../index.html" data-nav-id="work">Work</a>
   <a href="play.html" data-nav-id="play">Play</a>
   <a href="about.html" data-nav-id="about">About</a>
 </nav>
@@ -25,7 +24,7 @@
     <!-- HERO -->
     <div class="cs-hero-wrap">
       <!-- PLACEHOLDER: images/design-system/hero.png -->
-      <img class="cs-hero-img" src="../images/design-system/hero.png" alt="Design system hero" loading="lazy" />
+      <img class="cs-hero-img" src="../images/design system/des-sys1.png" alt="Design system hero" loading="lazy" />
 
       <div class="cs-meta">
         <div class="cs-title-row">
@@ -80,27 +79,40 @@
       </div>
 
       <!-- EXISTING SYSTEM -->
-      <div class="cs-section">
-        <h2 class="section-heading" style="color:#007ea3">The existing system</h2>
-        <div
-          class="image-slider"
-          data-slider
-          data-slides="../images/design system/des-sys1.png|../images/design system/des-sys2.png|../images/design system/des-sys3.png|../images/design system/des-sys4.png|../images/design system/des-sys5.png"
-          data-alts="Design system overview|Design system detail 1|Design system detail 2|Design system detail 3|Design system detail 4"
-        >
-          <div class="image-slider-frame">
-            <img src="../images/design system/des-sys1.png" alt="Design system overview" loading="lazy" data-slider-image />
-          </div>
-          <div class="page-nav">
-            <button class="btn-back" type="button" data-slider-prev>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Back
-            </button>
-            <span class="slide-count" data-slider-count>1 / 5</span>
-            <button class="btn-next" type="button" data-slider-next>
-              Next
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </button>
+      <div class="cs-section-wide-container">
+        <div class="cs-section">
+          <h2 class="section-heading" style="color:#007ea3">The existing system</h2>
+        </div>
+        <div class="cs-wide">
+          <div class="image-slider" data-slider>
+            <div class="image-slider-frame">
+              <img src="../images/design system/1.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/2.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/3.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/4.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/5.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/6.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/7.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/8.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/9.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/10.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/11.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/12.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/13.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/14.png" alt="Design system overview" loading="lazy" data-slider-image />
+              <img src="../images/design system/15.png" alt="Design system overview" loading="lazy" data-slider-image />
+            </div>
+            <div class="page-nav">
+              <button class="btn-back" type="button" data-slider-prev>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13 8H3M3 8L7 4M3 8L7 12" stroke="#151515" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Back
+              </button>
+              <span class="slide-count" data-slider-count>1 / 15</span>
+              <button class="btn-next" type="button" data-slider-next>
+                Next
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -116,7 +128,7 @@
         </div>
 
         <!-- PLACEHOLDER: images/design-system/component-audit.png -->
-        <img class="cs-img" style="aspect-ratio:711/331" src="../images/design-system/component-audit.png" alt="Component audit diagram" loading="lazy" />
+        <img class="cs-img" style="aspect-ratio:711/331" src="../images/design system/case-1.png" alt="Component audit diagram" loading="lazy" />
 
         <div class="cs-block">
           <p>Earlier we had so many unnecessary states and variants for components like input fields, buttons, dropdowns etc. I sat down and brainstormed on how to optimize the variants to have the minimum amount of variants for each component.</p>
@@ -192,7 +204,7 @@
         <h2 class="section-heading" style="color:#007ea3">4. Auditing Components + Tokens</h2>
         <p>We tested with non-designers across teams, the product team, the the ops team, the customer success team.</p>
         <!-- PLACEHOLDER: images/design-system/testing-session.png -->
-        <img class="cs-img" style="aspect-ratio:727/190" src="../images/design-system/testing-session.png" alt="Testing session screenshot" loading="lazy" />
+        <img class="cs-img" style="aspect-ratio:727/190" src="../images/design system/case-2.png" alt="Testing session screenshot" loading="lazy" />
 
         <p>Now, Claude could understand available components, compose UI using valid props, and avoid hallucinating styles.</p>
         <p style="margin-top:8px">Example output:</p>

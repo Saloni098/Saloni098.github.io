@@ -30,8 +30,9 @@
    .cs-info-value { font-size: 16px; }
    
    /* body content column */
-   .cs-body { display: flex; flex-direction: column; gap: var(--section-gap); align-items: center; width: 100%; max-width: 709px; min-width: 0; }
-   .cs-section { display: flex; flex-direction: column; gap: 32px; align-items: flex-start; width: 100%; min-width: 0; }
+   .cs-body { display: flex; flex-direction: column; gap: var(--section-gap); align-items: center; width: 100%; max-width: 1015px; min-width: 0; }
+   .cs-section { display: flex; flex-direction: column; gap: 32px; align-items: flex-start; width: 100%; max-width: 709px; min-width: 0; }
+   .cs-section.cs-wide { max-width: 1015px; }
    .cs-section p { font-size: 16px; }
    .cs-section ul, .cs-section ol { padding-left: 24px; display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
    .cs-section h4 { font-family: 'IBM Plex Mono', monospace; font-weight: 500; font-size: 18px; letter-spacing: -0.36px; }
@@ -40,6 +41,14 @@
    
    /* designs / full-bleed images for case studies (wider than text column) */
    .cs-wide { max-width: 1015px; width: 100%; }
+
+   .cs-section-wide-container {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     width: 100%;
+     gap: 32px;
+   }
    .cs-img {
      width: 100%;
      border-radius: 8px;
@@ -67,17 +76,26 @@
      aspect-ratio: 753 / 374;
      border-radius: 8px;
      background: #eaeaea;
-     display: flex;
-     align-items: center;
-     justify-content: center;
+     position: relative;
      overflow: hidden;
    }
 
    .image-slider-frame img {
+     position: absolute;
+     top: 0;
+     left: 0;
      width: 100%;
      height: 100%;
      object-fit: contain;
      display: block;
+     opacity: 0;
+     transition: opacity 0.35s ease-in-out;
+     pointer-events: none;
+   }
+
+   .image-slider-frame img.active {
+     opacity: 1;
+     pointer-events: auto;
    }
 
    .image-slider .page-nav { width: 100%; margin-top: 0; }
@@ -107,3 +125,67 @@
      .cs-title-row { font-size: 17px; }
      .cs-info-row { flex-direction: column; gap: 16px; }
    }
+
+   /* Bottom page-nav align with text content */
+   .cs-body > .page-nav {
+     max-width: 709px;
+     width: 100%;
+   }
+
+   /* Screen width >= 1700px styling */
+   @media (min-width: 1700px) {
+     .page-wrap {
+       max-width: 1515px;
+     }
+     .cs-body {
+       max-width: 1280px;
+     }
+     .cs-section.cs-wide,
+     .cs-wide {
+       max-width: 1280px;
+     }
+   }
+
+    /* Horizontal scroll section */
+    .horizontal-scroll-container {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      width: 100%;
+      padding-bottom: 16px;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+    .horizontal-scroll-container::-webkit-scrollbar {
+      height: 8px;
+    }
+    .horizontal-scroll-container::-webkit-scrollbar-track {
+      background: var(--bg-pill);
+      border-radius: 4px;
+    }
+    .horizontal-scroll-container::-webkit-scrollbar-thumb {
+      background: var(--border);
+      border-radius: 4px;
+    }
+    .horizontal-scroll-container::-webkit-scrollbar-thumb:hover {
+      background: var(--gray-text);
+    }
+    .horizontal-scroll-img {
+      flex-shrink: 0;
+      height: auto;
+      max-height: 448px;
+      width: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: block;
+      object-fit: contain;
+    }
+    
+    /* CS Video Tag */
+    .cs-video {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+      background: #eaeaea;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }

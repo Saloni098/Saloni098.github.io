@@ -212,6 +212,76 @@
      padding: 16px 20px;
    }
    
+   /* ---------- contact & tooltip block ---------- */
+   .about-block { width: 100%; }
+   .about-block-title {
+     font-family: 'IBM Plex Mono', monospace;
+     font-weight: 500;
+     font-size: 24px;
+     color: var(--orange);
+     margin-bottom: 24px;
+   }
+   .contact-row {
+     background: var(--bg-pill);
+     border: 0.5px solid var(--border);
+     border-radius: 16px;
+     padding: 24px 20px;
+     display: flex;
+     gap: 24px;
+     width: fit-content;
+   }
+   .contact-icon {
+     width: 53px; height: 53px;
+     border-radius: 12px;
+     object-fit: cover;
+     background: #eaeaea;
+   }
+   .tooltip {
+     position: relative;
+     display: inline-flex;
+   }
+   .tooltip::after {
+     content: attr(data-tooltip);
+     position: absolute;
+     bottom: calc(100% + 8px);
+     left: 50%;
+     transform: translateX(-50%) translateY(4px);
+     background: var(--black);
+     color: #fff;
+     padding: 6px 10px;
+     border-radius: 6px;
+     font-family: 'IBM Plex Mono', monospace;
+     font-size: 12px;
+     white-space: nowrap;
+     opacity: 0;
+     visibility: hidden;
+     transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+     pointer-events: none;
+     z-index: 100;
+     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+   }
+   .tooltip::before {
+     content: '';
+     position: absolute;
+     bottom: calc(100% + 3px);
+     left: 50%;
+     transform: translateX(-50%) translateY(4px);
+     border-width: 5px;
+     border-style: solid;
+     border-color: var(--black) transparent transparent transparent;
+     opacity: 0;
+     visibility: hidden;
+     transition: opacity 0.15s cubic-bezier(0.4, 0, 0.2, 1), transform 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+     pointer-events: none;
+     z-index: 100;
+   }
+   .tooltip:hover::after,
+   .tooltip:hover::before {
+     opacity: 1;
+     visibility: visible;
+     transform: translateX(-50%) translateY(0);
+   }
+   
    /* ---------- responsive ---------- */
    @media (max-width: 768px) {
      nav { top: 16px; padding: 12px 20px; gap: 20px; }

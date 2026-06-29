@@ -1,9 +1,8 @@
 /* ============================================================
    nav.js — shared nav active-state logic
    Works in 2 modes:
-   1) Single-page (index.html): scroll-spy switches the dot between
-      Home / Work / Play / About as the user scrolls past sections
-      with matching ids (#home, #work, #play, #about).
+   1) Single-page (index.html): "Work" is always active since the
+      home page IS the work page. Clicking Work scrolls to top.
    2) Sub-pages (about.html, play.html, case studies): the active
       link is simply the one whose href matches the current page —
       no scrolling needed, set via data-page on <body>.
@@ -22,24 +21,18 @@
       return; // no scroll-spy needed on sub-pages
     }
   
-    // Single-page mode: scroll-spy across sections with matching ids
-    const sections = document.querySelectorAll('section[id]');
-    if (!sections.length) return;
-  
-    const setActive = (id) => {
-      navLinks.forEach((link) => {
-        link.classList.toggle('active', link.dataset.navId === id);
-      });
-    };
-  
-    const scrollSpy = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) setActive(entry.target.id);
+    // Home page mode: Work is always active
+    navLinks.forEach((link) => {
+      link.classList.toggle('active', link.dataset.navId === 'work');
+    });
+
+    // Handle clicking Work link (href="#") to scroll to top smoothly
+    navLinks.forEach((link) => {
+      if (link.getAttribute('href') === '#') {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: 'smooth' });
         });
-      },
-      { rootMargin: '-40% 0px -50% 0px' }
-    );
-  
-    sections.forEach((s) => scrollSpy.observe(s));
+      }
+    });
   })();

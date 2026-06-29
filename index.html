@@ -14,14 +14,13 @@
 
 <!-- NAV -->
 <nav>
-  <a href="#home" data-nav-id="home" class="active">Home</a>
-  <a href="#work" data-nav-id="work">Work</a>
+  <a href="#" data-nav-id="work" class="active">Work</a>
   <a href="Pages/play.html" data-nav-id="play">Play</a>
   <a href="Pages/about.html" data-nav-id="about">About</a>
 </nav>
 
 <!-- HERO -->
-<section id="home" class="hero">
+<section id="work" class="hero">
   <div class="page-wrap">
     <div class="hero-intro">
       <div class="hero-name-line">
@@ -46,7 +45,7 @@
     <div class="divider"></div>
 
     <!-- WORK -->
-    <section id="work">
+    <section>
       <div class="section-label">Work</div>
 
       <!-- Project 1: Service Delivery -->
@@ -170,23 +169,42 @@
       </div>
     </section>
 
-    <!-- PLAY / WORKSPACE -->
+    <!-- WORKSPACE -->
     <section id="workspace-teaser" class="play-section">
       <div class="play-heading">
         <span>👀</span>
         <span>So, you've unlocked my workspace</span>
       </div>
-      <a href="Pages/play.html" class="play-card" style="text-decoration:none">
-        <img class="play-card-img" src="images/play/workspace-bg.png" alt="Workspace background" loading="lazy" />
-        <div class="play-dock">
-          <img class="dock-icon" src="images/play/dock-icon-1.png" alt="App icon 1" loading="lazy" />
-          <img class="dock-icon" src="images/play/dock-icon-2.png" alt="App icon 2" loading="lazy" />
-          <img style="width:57px;height:44px;object-fit:contain;flex-shrink:0" src="images/play/dock-icon-3.png" alt="App icon 3" loading="lazy" />
-          <div style="width:53px;height:53px;border-radius:12px;background:linear-gradient(158deg,#fff 18%,#e1e1e1 93%);display:flex;align-items:center;justify-content:center;flex-shrink:0">
-            <img width="24" height="24" src="images/play/dock-icon-4-doc-validation.png" alt="Document validation icon" loading="lazy" />
+      <div class="workspace-frame">
+        <img class="workspace-bg" src="images/workspace/background.png" alt="Workspace background" loading="lazy" />
+        <!-- macOS-style window -->
+        <div class="workspace-window">
+          <div class="window-titlebar">
+            <div class="window-dots">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+            </div>
+            <span class="window-title">Book a call — Cal.com</span>
+          </div>
+          <div class="window-body">
+            <iframe src="https://cal.com/salonidwivedi" style="width:100%;height:100%;border:none;" loading="lazy"></iframe>
           </div>
         </div>
-      </a>
+        <!-- macOS-style dock -->
+        <div class="workspace-dock">
+          <a href="#" class="tooltip" data-tooltip="Book a Call">
+            <img class="dock-icon" src="images/contact/calendar.png" alt="Book a Call" loading="lazy" /></a>
+          <a href="#" target="_blank" class="tooltip" data-tooltip="LinkedIn">
+            <img class="dock-icon" src="images/contact/linkedin.png" alt="LinkedIn" loading="lazy" /></a>
+          <a href="#" target="_blank" class="tooltip" data-tooltip="Twitter / X">
+            <img class="dock-icon" src="images/contact/twitter.png" alt="Twitter / X" loading="lazy" /></a>
+          <a href="mailto:saloni.dwivedi09@gmail.com" class="tooltip" data-tooltip="Gmail">
+            <img class="dock-icon" src="images/contact/gmail.png" alt="Gmail" loading="lazy" /></a>
+          <a href="mailto:saloni.dwivedi09@gmail.com" class="tooltip" data-tooltip="Resume">
+            <img class="dock-icon" src="images/contact/resume.png" alt="Resume" loading="lazy" /></a>
+        </div>
+      </div>
     </section>
 
   </div><!-- /page-wrap -->
@@ -194,5 +212,6 @@
 
 <script src="JS/nav.js"></script>
 <script src="JS/animations.js"></script>
+<script src="JS/workspace.js"></script>
 </body>
 </html>
