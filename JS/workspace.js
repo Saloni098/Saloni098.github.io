@@ -34,8 +34,8 @@
             <div class="linkedin-headline">Product Designer | Ex-CommendaHQ, Jumbochain</div>
             <div class="linkedin-meta">Bangalore, India • 500+ connections</div>
             <div class="linkedin-actions">
-              <a href="mailto:saloni.dwivedi09@gmail.com" class="linkedin-btn-primary">Connect</a>
-              <a href="mailto:saloni.dwivedi09@gmail.com" class="linkedin-btn-sec">Message</a>
+              <a href="https://www.linkedin.com/in/saloni-dwivedi-b62262206/" class="linkedin-btn-primary">Connect</a>
+              <a href="https://www.linkedin.com/in/saloni-dwivedi-b62262206/" class="linkedin-btn-sec">Message</a>
             </div>
             
             <div class="linkedin-section">
@@ -62,7 +62,7 @@
       height: DEFAULT_HEIGHT
     },
     twitter: {
-      title: 'Saloni Dwivedi (@salonidwivedi) / X',
+      title: 'Saloni Dwivedi (@layzmaxx) / X',
       content: `
         <div class="mock-twitter">
           <div class="twitter-banner">
@@ -72,9 +72,9 @@
             <div class="twitter-header">
               <div>
                 <div class="twitter-name">Saloni Dwivedi</div>
-                <div class="twitter-handle">@salonidwivedi</div>
+                <div class="twitter-handle">@layzmaxx</div>
               </div>
-              <a href="mailto:saloni.dwivedi09@gmail.com" class="twitter-follow-btn">Follow</a>
+              <a href="https://x.com/layzmaxx" class="twitter-follow-btn">Follow</a>
             </div>
             <div class="twitter-bio">
               Designing better digital products & digital experiences. CS background turned full-time designer. Sunlight, mountains, and interfaces.
@@ -140,7 +140,7 @@
     },
     resume: {
       title: 'Saloni Dwivedi — Resume',
-      content: `<iframe src="images/saloni.dwivedi.resume.pdf" style="width:100%;height:100%;border:none;"></iframe>`,
+      content: `<iframe src="images/resume.dwivedi.saloni.pdf" style="width:100%;height:100%;border:none;"></iframe>`,
       width: DEFAULT_WIDTH,
       height: DEFAULT_HEIGHT
     }
