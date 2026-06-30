@@ -27,7 +27,7 @@
       content: `
         <div class="mock-linkedin">
           <div class="linkedin-banner">
-            <img class="linkedin-profile-pic" src="images/about/_MG_4361.JPG" alt="Saloni Dwivedi" />
+            <img class="linkedin-profile-pic" src="images/about/profile.JPG" alt="Saloni Dwivedi" />
           </div>
           <div class="linkedin-content">
             <div class="linkedin-name">Saloni Dwivedi</div>
@@ -66,7 +66,7 @@
       content: `
         <div class="mock-twitter">
           <div class="twitter-banner">
-            <img class="twitter-profile-pic" src="images/about/_MG_4361.JPG" alt="Saloni Dwivedi" />
+            <img class="twitter-profile-pic" src="images/about/profile.JPG" alt="Saloni Dwivedi" />
           </div>
           <div class="twitter-content">
             <div class="twitter-header">
@@ -86,7 +86,7 @@
             
             <div class="twitter-feed">
               <div class="twitter-tweet">
-                <img class="tweet-avatar" src="images/about/_MG_4361.JPG" alt="Avatar" />
+                <img class="tweet-avatar" src="images/about/profile.JPG" alt="Avatar" />
                 <div class="tweet-main">
                   <div class="tweet-info">
                     <span class="tweet-author">Saloni Dwivedi</span>
@@ -98,7 +98,7 @@
                 </div>
               </div>
               <div class="twitter-tweet">
-                <img class="tweet-avatar" src="images/about/_MG_4361.JPG" alt="Avatar" />
+                <img class="tweet-avatar" src="images/about/profile.JPG" alt="Avatar" />
                 <div class="tweet-main">
                   <div class="tweet-info">
                     <span class="tweet-author">Saloni Dwivedi</span>
