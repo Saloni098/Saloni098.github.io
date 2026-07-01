@@ -37,4 +37,24 @@
   .btn-case-study {
     font-size: 14px;
   }
+  /* Workspace size adjustments */
+  .workspace-frame {
+    height: 580px !important; /* Fixed height to prevent collapse on mobile */
+  }
+  .workspace-window {
+    width: 100% !important;
+    max-width: 300px !important; /* Max width for mobile screen fitting */
+    height: 460px !important;   /* Vertically longer */
+  }
+  /* macOS-style dock adjustments on mobile */
+  .workspace-dock {
+    gap: 8px !important;
+    padding: 6px 10px !important;
+    bottom: 8px !important;
+  }
+  .dock-icon {
+    width: 36px !important;
+    height: 36px !important;
+    border-radius: 8px !important;
+  }
 }

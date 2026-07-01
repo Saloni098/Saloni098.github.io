@@ -11,7 +11,7 @@
   const windows = {};
 
   // Window default dimensions
-  const DEFAULT_WIDTH = 686;
+  const DEFAULT_WIDTH = 600;
   const DEFAULT_HEIGHT = 350;
 
   // Window content mapping
